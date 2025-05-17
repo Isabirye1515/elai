@@ -1,0 +1,30 @@
+{
+  "name": "elai",
+  "packageManager": "yarn@4.6.0",
+  
+    "scripts": {
+      "dev": "ts-node-dev --respawn src/index.ts",
+      "build": "tsc",  
+      "start": "node build/index.js"  
+    },
+  "devDependencies": {
+    "@types/cors": "^2",
+    "@types/express": "^5.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/mysql": "^2",
+    "@types/node": "^22.15.3",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.2",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.14.1",
+    "nodemon": "^3.1.10"
+  }
+}
