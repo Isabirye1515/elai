@@ -1,0 +1,155 @@
+body {
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0;
+  background: radial-gradient(circle, #023647 0%, #020238 100%);
+  font-family: 'Times New Roman', Times, serif;
+  overflow-x: hidden;
+
+}
+.side-nav{
+  border: #ddd 1px solid;
+
+  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+  margin: 5px;
+
+}
+.screen{
+  border: solid #ddd 1px;
+  padding: 2px;
+  overflow-y: auto;
+  max-height: 300px;
+  overflow-x: hidden;
+}
+.sent{
+  max-height: 20px;
+  color:#f8f8fd;
+  margin-left:50%;
+  border-radius: 20px;
+}
+.recieved{
+  color:#fff;
+  border-radius: 20px;
+}
+.about{
+  display:flex;
+  gap: 10%;
+  margin:5px;
+  box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+
+}
+.main-content {
+  align-items: center;
+  margin-top: 20px;
+  color: rgb(153, 164, 172);
+  z-index: 1;
+}
+.media{
+  border: #ddd 1px solid;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);  
+  margin: 10px;  
+  padding: 10px;
+
+}
+.dashboard-item{
+  display: flex;
+}
+.item{
+  display: flex;
+  border: #ddd 1px solid;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: transform 0.2s;
+  gap:5%;
+}
+.item:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.side-nav:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.item-2{
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  padding: 10px;
+
+
+  border-radius: 5px;
+
+  transition: transform 0.2s;
+}
+.item-2:hover {
+  transform: scale(1.05);
+}
+
+.person-card{
+  display: flex;
+  background-color: #fff;
+  padding: 2px;
+  margin:5px;
+  border-radius: 20px;
+  gap:5%;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(65, 66, 66, 0.2);
+
+}
+
+.content-1{
+  color: rgb(247, 235, 235);
+border: #ddd solid 1px;
+  padding: 10px;
+  
+}
+.search-bar{
+  align-items: center;
+  max-width: 500px;
+  background-color: #e0d5d5;
+}
+
+@media (min-width:1072px){
+  .main-content{
+    align-items:center;
+    margin-left:240px;
+
+    z-index: 1;
+  
+  }
+  .content-1{
+    border: #ddd solid 1px;
+    margin-top: 40px;
+      padding: 10px;
+      margin-right: -100px;
+    }
+
+
+
+
+}
+@media (max-width:1072px){
+ .search-bar{
+  position:absolute;
+  top:50px;
+ }
+ .content-1{
+ 
+  border: #ddd solid 1px;
+    padding: 10px;
+    margin: -5%;
+ 
+
+    
+  }
+  .main-content {
+    margin-bottom: 100%;
+    width: 100%;
+  }
+
+
+}
+
+
+
+

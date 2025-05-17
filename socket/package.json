@@ -1,0 +1,17 @@
+{
+  "name": "elai",
+  "packageManager": "yarn@4.6.0", 
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "http": "^0.0.1-security",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.10",
+    "websocket": "^1.0.35",
+    "ws": "^8.18.1"
+  }
+}

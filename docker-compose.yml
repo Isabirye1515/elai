@@ -1,0 +1,61 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8
+    container_name: elai-db
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456789
+      MYSQL_DATABASE: elai
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  backend:
+    build:
+      context: ./backend
+    container_name: elai-backend
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+    environment:
+      MYSQL_HOST: db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123456789
+      MYSQL_DATABASE: elai
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    command: ["yarn", "dev"]
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: elai-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: ["yarn", "start"]
+
+  websocket:
+    build:
+      context: ./socket
+    container_name: elai-socket
+    ports:
+      - "5001:5000"
+    volumes:
+      - /app/node_modules
+    depends_on:
+      - db
+    environment:
+      MYSQL_HOST: db
+    command: ["yarn", "nodemon", "index.js"]
+
+volumes:
+  mysql-data:

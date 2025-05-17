@@ -1,0 +1,34 @@
+# Node modules and build artifacts
+**/node_modules/
+**/.cache/
+**/dist/
+**/build/
+
+# Yarn 2+ artifacts
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/versions
+.pnp.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.*.local
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Docker
+*.pid
+*.sock
+docker-compose.override.yml
+
+# Miscellaneous
+*.tgz
