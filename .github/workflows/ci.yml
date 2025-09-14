@@ -19,6 +19,12 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Prepare Yarn
+        run: corepack prepare yarn@4.6.0 --activate
+
       - name: Install Backend Dependencies
         run: yarn install
         working-directory: backend
