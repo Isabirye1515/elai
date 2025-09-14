@@ -1,12 +1,11 @@
 {
   "name": "elai",
-  "packageManager": "yarn@4.6.0",
-  
-    "scripts": {
-      "dev": "ts-node-dev --respawn src/index.ts",
-      "build": "tsc",  
-      "start": "node build/index.js"  
-    },
+  "packageManager": "yarn@4.9.4",
+  "scripts": {
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "build": "tsc",
+    "start": "node build/index.js"
+  },
   "devDependencies": {
     "@types/cors": "^2",
     "@types/express": "^5.0.1",
