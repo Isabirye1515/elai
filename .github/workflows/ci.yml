@@ -23,7 +23,7 @@ jobs:
         run: corepack enable
 
       - name: Prepare Yarn
-        run: corepack prepare yarn@4.6.0 --activate
+        run: corepack prepare yarn@4.9.4 --activate
 
       - name: Install Backend Dependencies
         run: yarn install
